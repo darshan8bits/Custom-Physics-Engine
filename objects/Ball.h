@@ -6,12 +6,17 @@ class Ball
 private:
 	sf::CircleShape shape;
 	float velocityY;
+	float velocityX;
+	float coeff;
 public:
-	Ball(float x, float y, float radius);
+	Ball(float x, float y, float radius, float x_vel, float y_vel, float e);
+
 	void setColor(sf::Color color);
 
-	void update(float gravity, float dt);
+	void updateY(float gravity, float dt);
 
 	void draw(sf::RenderWindow& window);
+
+	void updateX();
 
 };
