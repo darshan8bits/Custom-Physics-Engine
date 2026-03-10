@@ -17,6 +17,10 @@ public:
 
 	void draw(sf::RenderWindow& window);
 
-	void updateX();
+	void updateX(float dt);
+
+	bool checkCollision(Ball& other);
+
+	void resolveCollision(Ball& other);
 
 };
